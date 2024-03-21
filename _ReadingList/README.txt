@@ -6,13 +6,18 @@ it, as everything I'm teaching you here comes from experience, which
 beats theory
 
 
-1. 2022_WritingCleanerCodeThatScales_EBook-v6-Final.pdf
+0. Unity_[Quick reading] [Unity] Coding guidelines & Basic Best Practices.pdf
+Source: https://avangarde-software.com/unity-coding-guidelines-basic-best-practices/
+Please prefer the original URL. The PDF included in this course is just 
+an offline backup, in case the URL goes down
+
+1. Unity_2022_WritingCleanerCodeThatScales_EBook-v6-Final.pdf
 Source: https://unity.com/resources/create-code-c-sharp-style-guide-e-book
 
-2. Level_up_your_code_with_Game_Programming_Pattern.pdf
+2. Unity_Level_up_your_code_with_Game_Programming_Pattern.pdf
 Source: https://unity.com/resources/level-up-your-code-with-game-programming-patterns
 
-3. create-modular-game-architecture-in-unity-with-scriptableobjects.pdf
+3. Unity_create-modular-game-architecture-in-unity-with-scriptableobjects.pdf
 Source: https://unity.com/resources/create-modular-game-architecture-with-scriptable-objects-ebook
 
 4. Everything: https://unity.com/how-to
