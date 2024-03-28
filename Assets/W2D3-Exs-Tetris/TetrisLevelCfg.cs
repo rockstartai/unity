@@ -9,11 +9,14 @@ namespace W2D3.Exs.Tetris
 	public class TetrisLevelCfg : ScriptableObject
 	{
 		[SerializeField] Vector2Int _size;
-		[SerializeField] Vector2Int _spawnPoint;
-		[SerializeField] Vector2Int _gravity;
-		[SerializeField] float _speed;
+		[SerializeField] Vector2Int _spawnPos;
+		[SerializeField] float _gravitySpeed;
+		[SerializeField] TetrisPieceCfg[] _pieces;
 
 
-		public float SecondsPerStep => 1f / _speed;
+		public Vector2Int Size => _size;
+		public Vector2Int SpawnPos => _spawnPos;
+		public float SecondsPerGravityStep => 1f / _gravitySpeed;
+		public IReadOnlyList<TetrisPieceCfg> Pieces => _pieces;
 	}
 }

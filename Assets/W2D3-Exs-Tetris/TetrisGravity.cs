@@ -7,23 +7,25 @@ namespace W2D3.Exs.Tetris
 {
 	public class TetrisGravity : MonoBehaviour
 	{
+		TetrisSignalBus _signalBus;
 		TetrisLevelCfg _lvl;
-		IActiveTetrisPieceProvider _activeTetrisPieceProvider;
+		ITetrisActivePieceHolder _activePieceHolder;
+		TetrisPieceMover _mover;
 
 
-		public void Initialize(
-			TetrisLevelCfg lvl, 
-			IActiveTetrisPieceProvider activeTetrisPieceProvider
-			) 
+		public void Init(TetrisSignalBus signalBus, TetrisLevelCfg lvl, ITetrisActivePieceHolder activePieceHolder,
+			TetrisPieceMover mover) 
 		{
+			_signalBus = signalBus;
 			_lvl = lvl;
-			_activeTetrisPieceProvider = activeTetrisPieceProvider;
-			StartCoroutine()
+			_activePieceHolder = activePieceHolder;
+			_mover = mover;
+			StartCoroutine(GravityLoop());
 		}
 
 		IEnumerator GravityLoop()
 		{
-			var delay = new WaitForSeconds(_lvl.SecondsPerStep);
+			var delay = new WaitForSeconds(_lvl.SecondsPerGravityStep);
 			while (true)
 			{
 				yield return delay;
@@ -33,28 +35,17 @@ namespace W2D3.Exs.Tetris
 
 		void ApplyGravityStep()
 		{
-			if (_activeTetrisPieceProvider == null)
+			if (_activePieceHolder == null)
 				return;
 
-			var activePiece = _activeTetrisPieceProvider.ActivePiece;
-
+			var activePiece = _activePieceHolder.Piece;
 			if (activePiece == null)
 				return;
 
-			activePiece.
-
-		}
-
-
-		void Update()
-		{
-			if (_currentPiece == null)
-				return;
-
-			if (Input.GetKeyDown(KeyCode.DownArrow))
-			{
-
-			}
+			var succeeded = _mover.TryMove(activePiece, Vector2Int.down);
+			var reachedGround = !succeeded;
+			if (reachedGround)
+				_signalBus.Publish(new TetrisPieceReachedGroundEvent(activePiece));
 		}
 	}
 }

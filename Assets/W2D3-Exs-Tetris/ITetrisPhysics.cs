@@ -5,9 +5,8 @@ using UnityEngine;
 
 namespace W2D3.Exs.Tetris
 {
-	public interface IActiveTetrisPieceProvider
+	public interface ITetrisPhysics
 	{
-		TetrisPiece ActivePiece { get; }
-
+		bool IsCollidingWithSolidWorld(Vector2Int pos);
 	}
 }
