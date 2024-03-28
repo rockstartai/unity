@@ -1,0 +1,14 @@
+{
+    "name": "W2D3.Exs.Tetris",
+    "rootNamespace": "W2D3.Exs.Tetris",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
