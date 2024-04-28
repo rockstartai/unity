@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!244 &-8450777383651759875
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 3fc378e3464605445b4c11fe277d31ce
+  m_EffectName: Chorus
+  m_MixLevel: f636ffedf6e5b7b4b9d1ef05fda193e9
+  m_Parameters:
+  - m_ParameterName: Dry mix
+    m_GUID: 9929d5ba4523aa9418bb7140645b0968
+  - m_ParameterName: Wet mix tap 1
+    m_GUID: 10c1fa875eb9d44439743d545bed71d1
+  - m_ParameterName: Wet mix tap 2
+    m_GUID: c168324a1926dd6479e22d181ae681a2
+  - m_ParameterName: Wet mix tap 3
+    m_GUID: 7096bc7e5c69f4145a140924e1f3ac65
+  - m_ParameterName: Delay
+    m_GUID: 0ef0806d0a96a364ca666b4d45a2b1af
+  - m_ParameterName: Rate
+    m_GUID: 13c30006ad7df054b9906de3d6d9f9ea
+  - m_ParameterName: Depth
+    m_GUID: bc2883d009feb82408cb0e66d6a6b798
+  - m_ParameterName: Feedback
+    m_GUID: 78bc0f0e44f17014a8f156b0ecec5a1d
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!244 &-4294367601851186200
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -131,9 +161,27 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 53c074816e487094fb8a0d4dd0e34135
   m_FloatValues:
+    a75cf5f1e758378459f9d08ab5d3ae94: 93
     04b933d29ee3012478021bc0212807ad: -55
+    6bcfbd06d5510af4b9f9f63113bf6837: 0.773
     67d82027ab4650b4fbf48f1344cd7d0c: 0
   m_TransitionOverrides: {}
+--- !u!244 &4247138166089606837
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 3254196eca274d14c88721023153e9e7
+  m_EffectName: Distortion
+  m_MixLevel: 7325d1c20f1baad42976b225af4aec7e
+  m_Parameters:
+  - m_ParameterName: Level
+    m_GUID: 1d60e5a9735d3c54c986f9ecacc8c4fd
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!244 &5039013508350918896
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
