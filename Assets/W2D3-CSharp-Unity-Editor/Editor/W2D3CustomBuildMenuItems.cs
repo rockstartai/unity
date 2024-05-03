@@ -6,7 +6,7 @@ using UnityEngine;
 using System;
 using Unity.VisualScripting;
 
-namespace W2D3.CSharp.Unity
+namespace W2D3.CSharp.Unity.Editor
 {
 	public static class W2D3CustomBuildMenuItems
 	{
