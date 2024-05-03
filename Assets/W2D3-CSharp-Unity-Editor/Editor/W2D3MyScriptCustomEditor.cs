@@ -24,13 +24,14 @@ namespace W2D3.CSharp.Unity.Editor
 		void OnAdd1Clicked()
 		{
 			var obj = (W2D3MyScript)target;
+			// Registering undo for adding 1, so that we can Ctrl+Z it, if needed
+			Undo.RecordObject(obj, "Add 1 to myProperty");
 			obj.myProperty += 1;
 		}
 
 		void OnCloneMeClicked()
 		{
 			var obj = (W2D3MyScript)target;
-
 			var clone = Instantiate(obj.gameObject);
 
 			// Move by <obj.myProperty> meters above the object
@@ -39,6 +40,9 @@ namespace W2D3.CSharp.Unity.Editor
 
 			// Optionally change the name of the clone
 			clone.name = obj.name + " Clone";
+
+			// Registering undo for the clone creation, so that we can Ctrl+Z it, if needed
+			Undo.RegisterCreatedObjectUndo(clone, "Clone Object");
 
 			// Select the clone automatically, so we can just keep cloning by clicking!
 			Selection.activeGameObject = clone;
