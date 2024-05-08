@@ -1,0 +1,3 @@
+// As per https://forum.unity.com/threads/assets-generatedlocalrepo-folder-what-is-it-source-control-it.1514795/#post-9737329
+*
+!.gitignore
