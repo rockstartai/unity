@@ -22,6 +22,14 @@
         "com.google.firebase.app": "11.9.0"
       }
     },
+    "com.google.firebase.messaging": {
+      "version": "file:../GooglePackages/com.google.firebase.messaging-11.9.0.tgz",
+      "depth": 0,
+      "source": "local-tarball",
+      "dependencies": {
+        "com.google.firebase.app": "11.9.0"
+      }
+    },
     "com.unity.collab-proxy": {
       "version": "2.3.1",
       "depth": 0,

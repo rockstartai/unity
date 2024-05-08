@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/W2D1-UI-Transitions/W2D1-UI-Transitions-NextScreen.unity
-    guid: 8322ffffe55492141ab9a052f76072a5
+    path: Assets/W2D1-UI-Mobile/W2D1-UI-Mobile.unity
+    guid: 7f4b814f209ff414ebcd77f390d1124e
   m_configObjects: {}
