@@ -2,14 +2,15 @@ using UnityEngine;
 
 namespace W2D3.CSharp
 {
-	// Simple sprite animator script for Unity
 	public class W2D3ManualAnimator : MonoBehaviour
 	{
-		public SpriteRenderer spriteRenderer; // Assign in inspector
-		public Sprite[] frames; // Assign in inspector
-		private int index = 0;
-		private float timer = 0f;
-		public float frameRate = 10f; // Frames per second
+		public SpriteRenderer spriteRenderer;
+		public Sprite[] frames;
+		public float frameRate = 10f;
+
+		int index = 0;
+		float timer = 0f;
+
 
 		void Update()
 		{
