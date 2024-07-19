@@ -6,9 +6,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace W2D4.Microservices
+namespace W2D5.Microservices
 {
-	public class W2D4AuthUI : MonoBehaviour
+	public class W2D5AuthUI : MonoBehaviour
 	{
 		[SerializeField] TMP_InputField _emailInput;
 		[SerializeField] TMP_InputField _passwordInput;

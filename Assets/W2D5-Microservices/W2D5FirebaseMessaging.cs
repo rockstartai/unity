@@ -4,9 +4,9 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 
-namespace W2D4.Microservices
+namespace W2D5.Microservices
 {
-	public class W2D4FirebaseMessaging : MonoBehaviour
+	public class W2D5FirebaseMessaging : MonoBehaviour
 	{
 		[SerializeField] TMP_InputField _tokenText;
 		[SerializeField] TMP_InputField _messageText;

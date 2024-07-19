@@ -10,12 +10,12 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace W2D4.Microservices
+namespace W2D5.Microservices
 {
 	/// <summary>
 	/// This expects the user is already logged in. Use <see cref="W2D4AuthUI"/> for that
 	/// </summary>
-	public class W2D4FirebaseDBUI : MonoBehaviour
+	public class W2D5FirebaseDBUI : MonoBehaviour
 	{
 		[SerializeField] List<Toggle> _userItemsToggles;
 		[SerializeField] Button _submitButton;
