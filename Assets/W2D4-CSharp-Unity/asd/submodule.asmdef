@@ -1,0 +1,16 @@
+{
+    "name": "submodule",
+    "rootNamespace": "",
+    "references": [
+        "GUID:d4a1f51d515f047958215ae77904c51a"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

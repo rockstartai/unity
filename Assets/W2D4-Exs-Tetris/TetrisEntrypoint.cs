@@ -23,7 +23,7 @@ namespace W2D3.Exs.Tetris
 			var mover = new TetrisPieceMover(physics);
 
 			_gravity.Init(signalBus, _levelCfg, activePieceHolder, mover);
-			_input.Init(mover);
+			_input.Init(mover, activePieceHolder);
 			_level.Init(signalBus, _levelCfg, _pieceFactory, activePieceHolder, solidifiedPiecesHolder);
 		}
 	}

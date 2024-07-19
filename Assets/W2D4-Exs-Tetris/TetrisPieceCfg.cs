@@ -12,7 +12,7 @@ namespace W2D3.Exs.Tetris
 		[SerializeField, TextArea(4, 4)] string _blockScheme;
 
 
-		public bool[][] GetBlocks()
+        public bool[][] GetBlocks()
 		{
 			var lines = GetCleanScheme().Split('\n');
 			var nLines = lines.Length;

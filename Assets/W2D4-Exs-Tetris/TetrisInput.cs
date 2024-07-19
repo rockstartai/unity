@@ -7,17 +7,20 @@ namespace W2D3.Exs.Tetris
 {
 	public class TetrisInput : MonoBehaviour
 	{
-		TetrisPiece _currentPiece;
 		TetrisPieceMover _mover;
 		IInputHandler _input;
+		ITetrisActivePieceHolder _activePieceHolder;
 
 
-		public void Init(TetrisPieceMover mover)
+
+        public void Init(TetrisPieceMover mover,
+			ITetrisActivePieceHolder activePieceHolder)
 		{
 			_mover = mover;
+			_activePieceHolder = activePieceHolder;
 
-			// Strategy pattern
-			if (Application.isMobilePlatform)
+            // Strategy pattern
+            if (Application.isMobilePlatform)
 				_input = new MobileInputHandler();
 			else
 				_input = new StandaloneInputHandler();
@@ -26,13 +29,13 @@ namespace W2D3.Exs.Tetris
 
 		void Update()
 		{
-			if (_currentPiece == null || _mover == null)
+			if (_activePieceHolder.Piece == null)
 				return;
 
 			if (_input.IsLeft())
-				_mover.TryMove(_currentPiece, Vector2Int.left);
+				_mover.TryMove(_activePieceHolder.Piece, Vector2Int.left);
 			else if (_input.IsRight())
-				_mover.TryMove(_currentPiece, Vector2Int.right);
+				_mover.TryMove(_activePieceHolder.Piece, Vector2Int.right);
 		}
 
 
@@ -77,7 +80,7 @@ namespace W2D3.Exs.Tetris
 
 			// This method checks if the swipe has ended and returns the horizontal delta.
 			// Returns 0 if there's no valid swipe.
-			private float GetSwipeDeltaX()
+			float GetSwipeDeltaX()
 			{
 				if (Input.touchCount > 0)
 				{

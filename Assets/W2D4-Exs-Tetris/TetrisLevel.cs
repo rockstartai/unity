@@ -32,7 +32,6 @@ namespace W2D3.Exs.Tetris
 			SpawnNextPiece();
 		}
 
-
 		void SpawnNextPiece()
 		{
 			var nPieces = _cfg.Pieces.Count;

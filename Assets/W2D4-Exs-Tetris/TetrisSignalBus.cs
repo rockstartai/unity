@@ -22,8 +22,6 @@ namespace W2D3.Exs.Tetris
 	/// </summary>
 	public class TetrisSignalBus
 	{
-		public static TetrisSignalBus Instance { get; private set; } = new();
-
 		readonly Dictionary<Type, List<Delegate>> _subs = new();
 
 

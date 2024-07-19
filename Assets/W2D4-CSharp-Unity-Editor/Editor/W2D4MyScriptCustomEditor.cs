@@ -7,8 +7,8 @@ namespace W2D3.CSharp.Unity.Editor
 	/// Adds a "Add 1" button in the inspector for any W2D3MyScript, which adds 1 to its myProperty
 	/// Adds a "Clone me" button to create a clone above "myProperty" meters above it
 	/// </summary>
-	[CustomEditor(typeof(W2D3MyScript))]
-	public class W2D3MyScriptCustomEditor : UnityEditor.Editor
+	[CustomEditor(typeof(W2D4MyScript))]
+	public class W2D4MyScriptCustomEditor : UnityEditor.Editor
 	{
 		public override void OnInspectorGUI()
 		{
@@ -23,7 +23,7 @@ namespace W2D3.CSharp.Unity.Editor
 
 		void OnAdd1Clicked()
 		{
-			var obj = (W2D3MyScript)target;
+			var obj = (W2D4MyScript)target;
 			// Registering undo for adding 1, so that we can Ctrl+Z it, if needed
 			Undo.RecordObject(obj, "Add 1 to myProperty");
 			obj.myProperty += 1;
@@ -31,7 +31,7 @@ namespace W2D3.CSharp.Unity.Editor
 
 		void OnCloneMeClicked()
 		{
-			var obj = (W2D3MyScript)target;
+			var obj = (W2D4MyScript)target;
 			var clone = Instantiate(obj.gameObject);
 
 			// Move by <obj.myProperty> meters above the object

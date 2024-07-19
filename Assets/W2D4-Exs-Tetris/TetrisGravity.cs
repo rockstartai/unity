@@ -29,6 +29,7 @@ namespace W2D3.Exs.Tetris
 			while (true)
 			{
 				yield return delay;
+				Debug.Log("Step");
 				ApplyGravityStep();
 			}
 		}

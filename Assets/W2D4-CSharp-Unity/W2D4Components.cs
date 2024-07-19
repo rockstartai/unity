@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace W2D3.CSharp.Unity
 {
-	public class W2D3Components : MonoBehaviour
+	public class W2D4Components : MonoBehaviour
 	{
 		[SerializeField] AudioClip _audioClip;
 		Rigidbody _rb;
@@ -32,6 +32,7 @@ namespace W2D3.CSharp.Unity
 			audioSrc.playOnAwake = false; // prevent auto-play
 			// Then play it whenever you want
 			audioSrc.Play();
+
 			// Then, then again (for ex., after 5 secs, or when a collision happens), etc.
 			audioSrc.Play();
 
@@ -78,13 +79,13 @@ namespace W2D3.CSharp.Unity
 				// Do stuff
 			}
 
-			var comp = collision.gameObject.GetComponent<W2D3Components>();
+			var comp = collision.gameObject.GetComponent<W2D4Components>();
 			if (comp != null)
 			{
-				// We've just collided with another object that has an instance of this type of script
-				// Note: W2D3Components is just a name we're using for this script. Imagine instead of
-				// 'W2D3Components' we have 'Ball' or 'Gun' or 'Bullet' etc.
-			}
-		}
+                // We've just collided with another object that has an instance of this type of script
+                // Note: W2D4Components is just a name we're using for this script. Imagine instead of
+                // 'W2D4Components' we have 'Ball' or 'Gun' or 'Bullet' etc.
+            }
+        }
 	}
 }

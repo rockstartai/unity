@@ -22,9 +22,12 @@ namespace W2D3.Exs.Tetris
 		{
 			_cfg = cfg;
 		}
+        private void Update()
+        {
+            
+        }
 
-
-		public void MoveBy(Vector2Int delta)
+        public void MoveBy(Vector2Int delta)
 		{
 			Position += delta;
 		}
