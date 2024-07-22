@@ -5,10 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/W2D1-UI-Mobile/W2D1-UI-Mobile.unity
     guid: 7f4b814f209ff414ebcd77f390d1124e
-  - enabled: 1
+  - enabled: 0
     path: Assets/W2D1-UI-Transitions/W2D1-UI-Transitions-NextScreen.unity
     guid: 8322ffffe55492141ab9a052f76072a5
+  - enabled: 1
+    path: Assets/W3D1-Cinemachine/W3D1-Cinemachine-FreeLook-LockRotationToCam.unity
+    guid: 2f0e2779c05304ba598c3627113ac19f
   m_configObjects: {}
