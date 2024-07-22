@@ -36,7 +36,7 @@ namespace W3D1.Cinemachine
             var movePerFrame = movePerSec * Time.deltaTime;
             var movePerFrameInCameraSpace = camTr.TransformVector(movePerFrame);
             movePerFrameInCameraSpace.y = 0f; // don't move vertically
-            transform.Translate(movePerFrameInCameraSpace, Space.World);
+            transform.position += movePerFrameInCameraSpace;
 
             // Look ahead
             var dir = movePerFrameInCameraSpace.normalized;

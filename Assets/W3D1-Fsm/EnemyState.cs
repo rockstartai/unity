@@ -17,8 +17,9 @@ namespace W3D1.Fsm
             _fsm = fsm;
         }
 
-        protected virtual void Update() { }
         protected virtual void OnEnable() { }
+        protected virtual void Update() { }
+        protected virtual void FixedUpdate() { }
         protected virtual void OnDisable() { }
 
         protected void ChangeState(EnemyState state) => _fsm.ChangeState(state);

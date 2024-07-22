@@ -13,12 +13,12 @@ namespace W3D1.Fsm
         public DisengagingState Disengaging;
 
 
-        public void InitAll(EnemyFsm enemy)
+        public void InitAll(EnemyFsm fsm)
         {
             EnemyState[] states = { Patrol, Engaging, Attacking, Disengaging };
             foreach (var state in states)
             {
-                state.SetFsm(enemy);
+                state.SetFsm(fsm);
                 state.gameObject.SetActive(false);
             }
         }

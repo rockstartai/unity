@@ -1,12 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 namespace W3D1.Fsm
 {
-    // The enemy cannot attack the player while in this state (using this just
-    // for demostration, as you'd probably add reengagement )
     public class DisengagingState : EnemyState
     {
         [SerializeField] float _disengageSpeed = 2.5f;

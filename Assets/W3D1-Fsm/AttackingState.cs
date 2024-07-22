@@ -11,20 +11,20 @@ namespace W3D1.Fsm
 
         public float AttackRange => _attackRange;
 
-        float _attackCooldown = 1f;
+        const float ATTACK_COOLDOWN = .2f;
         float _lastAttackTime;
 
 
-        protected override void OnEnable()
-        {
-            _lastAttackTime = -_attackCooldown;
-        }
+        //protected override void OnEnable()
+        //{
+        //    //_lastAttackTime = -ATTACK_COOLDOWN;
+        //}
 
-        protected override void Update()
+        protected override void FixedUpdate()
         {
             Enemy.LookAt(Player);
 
-            if (Time.time - _lastAttackTime >= _attackCooldown)
+            if (Time.time - _lastAttackTime >= ATTACK_COOLDOWN)
             {
                 ShowShot();
                 ApplyShotForce();
@@ -39,8 +39,8 @@ namespace W3D1.Fsm
 
         void ShowShot()
         {
-            var eff = GameObject.Instantiate(_shootEffectPrefab, parent: Enemy);
-            eff.transform.rotation = Enemy.rotation;
+            var eff = GameObject.Instantiate(_shootEffectPrefab);
+            eff.transform.SetPositionAndRotation(Enemy.position, Enemy.rotation);
             Destroy(eff, t: .3f);
         }
 

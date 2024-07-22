@@ -30,10 +30,7 @@ namespace W3D1.Cinemachine
                 }
             }
 
-            if (closestCamera != null)
-            {
-                ActivateCamera(closestCamera);
-            }
+            ActivateCamera(closestCamera);
         }
 
         void ActivateCamera(CinemachineVirtualCamera cameraToActivate)

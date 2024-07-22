@@ -20,7 +20,6 @@ namespace W3D1.Fsm
         void Start()
         {
             States.InitAll(this);
-
             ChangeState(States.Patrol);
         }
 
